@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import CurrencyRow from "./CurrencyRow";
+import CurrencyList from "./CurrencyList";
 
 const xchangeURL = "https://api.exchangeratesapi.io/latest";
 
@@ -11,6 +12,7 @@ function App() {
   const [exchangeRate, setExchangeRate] = useState();
   const [amount, setAmount] = useState(1);
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
+  const [currencyListItems, setCurrencyListItems] = useState()
 
 
   let toAmount, fromAmount
@@ -31,6 +33,7 @@ function App() {
         setFromCurrency(data.base);
         setToCurrency(firstCurrency);
         setExchangeRate(data.rates[firstCurrency]);
+        setCurrencyListItems(data.rates);
       });
   }, []);
 
@@ -70,6 +73,10 @@ function App() {
         onChangeCurrency={(e) => setToCurrency(e.target.value)}
         amount={toAmount}
         onChangeAmount={handleToAmountChange}
+      />
+
+      <CurrencyList 
+        currencyListItems={currencyListItems}
       />
     </div>
   );
