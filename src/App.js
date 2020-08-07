@@ -28,6 +28,7 @@ function App() {
     fetch(xchangeURL)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         const firstCurrency = Object.keys(data.rates)[0];
         setCurrencyRates([data.base, ...Object.keys(data.rates)]);
         setFromCurrency(data.base);
