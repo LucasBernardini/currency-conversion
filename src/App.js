@@ -78,6 +78,7 @@ function App() {
 
       <CurrencyList 
         currencyListItems={currencyListItems}
+        currencyName={currencyRates}
       />
     </div>
   );

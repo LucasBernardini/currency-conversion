@@ -1,13 +1,22 @@
 import React from "react";
-import _ from 'lodash';
+import _ from "lodash";
 
 export default function CurrencyList(props) {
-  const { currencyListItems } = props;
-  console.log(currencyListItems)
+  const { currencyListItems, currencyName } = props;
+
+
+
+
+
   return (
     <div>
-        <ul>
+      <ul>
         {_.toArray(currencyListItems).map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <ul>
+        {currencyName.map((item) => (
           <li>{item}</li>
         ))}
       </ul>
