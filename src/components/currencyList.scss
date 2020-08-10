@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+}
+
+.currency {
+    text-decoration: none;
+    list-style: none;
+    background-color: #666;
+    padding: 2rem 0;
+    font-size: 24px;
+    &__name {
+        & li:nth-child(even) {
+            background-color: #999999;
+            width: 8rem;
+        }
+
+        &--item{
+            padding-left: 4rem;
+        }
+    }
+    &__dollar {
+        & li:nth-child(even) {
+            background-color: #999999;
+            width: 8rem;
+        }
+        &--item{
+            padding-right: 4rem;
+
+        }
+    }
+}
+
+.header2 {
+    margin-top: 8rem;
+}

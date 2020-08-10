@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import CurrencyRow from "./CurrencyRow";
-import CurrencyList from "./CurrencyList";
+import CurrencyRow from "./components/CurrencyRow";
+import CurrencyList from "./components/CurrencyList";
 
 const xchangeURL = "https://api.exchangeratesapi.io/latest";
 
