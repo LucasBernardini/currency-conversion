@@ -1,13 +1,15 @@
 .container {
     display: flex;
+    justify-content: center;
 }
 
 .currency {
     text-decoration: none;
     list-style: none;
     background-color: #666;
-    padding: 2rem 0;
+    padding: 0;
     font-size: 24px;
+    color: #ededed;
     &__name {
         & li:nth-child(even) {
             background-color: #999999;
@@ -16,6 +18,8 @@
 
         &--item{
             padding-left: 4rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
     }
     &__dollar {
@@ -25,11 +29,13 @@
         }
         &--item{
             padding-right: 4rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
 
         }
     }
 }
 
 .header2 {
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
